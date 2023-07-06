@@ -1,0 +1,672 @@
+body {
+    width: calc(100% - 2vh);
+    height: calc(100vh - 2vh);
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 1vh;
+    user-select: none;
+    /* background-image: url("https://cdn.discordapp.com/attachments/934788594097348608/965547116929880114/unknown.png");
+    background-position: center;
+    background-size: cover; */
+    overflow: hidden;
+    position: relative;
+    flex-direction: column;
+    /* background-color: black; */
+}
+
+body::-webkit-scrollbar {
+    display:none;
+    margin: 0;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+@font-face {
+    font-family: regular;
+    src: url(fonts/Metropolis-Regular.otf);
+}
+
+@font-face {
+    font-family: medium;
+    src: url(fonts/Metropolis-Medium.otf);
+}
+
+@font-face {
+    font-family: bold;
+    src: url(fonts/Metropolis-Bold.otf);
+}
+
+@font-face {
+    font-family: italic;
+    src: url(fonts/SignPainter\HouseScript.ttf);
+}
+
+.chat {
+    width: 50vh;
+    height: 30vh;
+    overflow-y: auto;
+    direction: rtl;
+    padding-left: 1vh;
+}
+
+.chat::-webkit-scrollbar {
+    width: .5vh;
+    border-radius: 2vh;
+}
+
+.chat::-webkit-scrollbar-track {
+    background: rgb(101, 101, 101);
+    border-radius: 2vh;
+}
+
+.chat::-webkit-scrollbar-thumb {
+    background: #FF3030;
+    border-radius: 2vh;
+}
+
+
+.redaksiyon {
+    direction:ltr;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: .75vh;
+    margin-block-end: .75vh;
+}
+
+.icon {
+    width: 2.75vh;
+    height: 2.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #00984E;
+    border-radius: 5vh;
+}
+
+.icon > i {
+    color: black;
+    font-size: 1.25vh;
+}
+
+.text {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.pName {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: .5vh;
+}
+
+.pName > span {
+    color: #00984E;
+    font-size: 1.5vh;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 500;
+    margin-right: .5vh;
+}
+
+.number {
+    width: 2vh;
+    height: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5vh;
+    background-color: #00984E;
+}
+
+.number > i {
+    color: #fff;
+    font-size: 1vh;
+}
+
+.message {
+    width: 2vh;
+    height: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5vh;
+    background-color: #FF9001;
+}
+
+.message > i {
+    color: #fff;
+    font-size: 1vh;
+}
+
+.pText {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.pText > span {
+    color: #76c00f;
+    font-size: 1.5vh;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 500;
+    text-shadow: 0 0 3px black;
+}
+
+.pSteamId {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.pSteamId > span {
+    color: rgb(199, 199, 199);
+    font-size: 1.5vh;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 500;
+}
+
+.do {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: .75vh;
+    margin-block-end: .75vh;
+    direction:ltr;
+}
+
+.icon.dos {
+   background-color: #FFC5FB;
+}
+
+.icon.dos > i {
+    color: #9E577F;
+    font-size: 1.75vh;
+}
+
+.dotext {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.dotext > span {
+    color: #FFC5FB;
+    font-size: 1.5vh;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 500;
+    text-shadow: 0 0 3px black;
+}
+
+.info {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: .75vh;
+    margin-block-end: .75vh;
+    direction:ltr;
+}
+
+.icon.infos {
+    background-color: #2FB3FF;
+}
+ 
+.icon.infos > i {
+    color: rgb(18, 90, 191);
+    font-size: 1.5vh;
+    font-weight: bold;
+}
+
+.infotext {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.infotext > span {
+    color: #fff;
+    font-size: 1.5vh;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 500;
+    text-shadow: 0 0 3px black;
+}
+
+.error {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: .75vh;
+    margin-block-end: .75vh;
+    direction:ltr;
+}
+
+.icon.errors {
+    background-color: #f1887b;
+}
+ 
+.icon.errors > i {
+    color: #cb0b0b;
+    font-size: 1.5vh;
+    font-weight: bold;
+}
+
+.errortext {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.errortext > span {
+    color: rgb(236, 13, 13);
+    font-size: 1.5vh;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 500;
+    text-shadow: 0 0 3px black;
+}
+
+.input {
+    position: relative;
+    width: 50vh;
+    height: 4vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.5vh;
+    z-index: 1;
+    background-color: #292929c9;
+}
+
+.input > input {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    padding-left: 1.5vh;
+    background-color: transparent;
+    font-size: 1.5vh;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 500;
+    color: #fff;
+    z-index: 2;
+}
+
+.emotes {
+    width: 3.25vh;
+    height: 3.25vh;
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.35);
+    right: 5vh;
+    border-radius: 5vh;
+    transition: .2s;
+    -webkit-transition: .2s ease-in-out;
+}
+
+.send {
+    width: 4.25vh;
+    height: 4.25vh;
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FCAF00;
+    right: -.25vh;
+    border-radius: 5vh;
+    transition: .2s;
+    -webkit-transition: .2s ease-in-out;
+}
+
+.send:hover {
+    transform: scale(1.05);
+}
+
+.send:active {
+    transition: .2s;
+    transform: scale(1.025);
+    position: absolute;
+}
+
+.send > i {
+    color: black;
+    font-size: 1.75vh;
+}
+
+.emotes:hover {
+    transform: scale(1.05);
+}
+
+.emotes:active {
+    transition: .2s;
+    transform: scale(1.025);
+    position: absolute;
+}
+
+.emotes > i {
+    color: rgb(136, 136, 136);
+    font-size: 1.75vh;
+    margin-top: .25vh;
+}
+
+.emotes i:hover {
+    color: #fff;
+}
+
+.emotes.active {
+    transform: scale(1.025);
+}
+
+.emotes.active > i {
+    color: #fff;
+}
+
+
+.quicks {
+    width: calc(50vh - .25vh);
+    height: 4.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-block-start: 1vh;
+    padding-left: .5vh;
+    overflow-x: auto;
+    gap: 2.25vh;
+}
+
+.quicks::-webkit-scrollbar {
+    display: none;
+    margin: 0;
+}
+
+.quicks::-webkit-scrollbar-track {
+    background: rgb(101, 101, 101);
+    border-radius: 2vh;
+}
+
+.quicks::-webkit-scrollbar-thumb {
+    background: #FF3030;
+    border-radius: 2vh;
+}
+
+.quick {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .75vh;
+    border-radius: 1.5vh;
+    background-color: #292929c9;
+    cursor: pointer;
+}
+
+.quick:hover {
+    background-color: #131313;
+}
+
+.quick:hover > span {
+    color: rgb(194, 194, 194);
+}
+
+.quick:active {
+    position: relative;
+    top: .1vh;
+}
+
+.quick > span {
+    color: rgb(130, 130, 130);
+    font-size: 1.5vh;
+    font-weight: bold;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.me {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: .75vh;
+    margin-block-end: .75vh;
+    direction:ltr;
+}
+
+.icon.mes {
+   background-color: #1ac371;
+}
+
+.icon.mes > i {
+    color:  #015c2b;
+    font-size: 1.75vh;
+}
+
+.metext {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.metext > span {
+    color: #1ac371;
+    font-size: 1.5vh;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 500;
+    text-shadow: 0 0 3px black;
+}
+
+.report {
+    direction:ltr;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: .75vh;
+    margin-block-end: .75vh;
+}
+
+.rName {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: .5vh;
+}
+
+.rName > span {
+    color: #006a98;
+    font-size: 1.5vh;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 500;
+    margin-right: .5vh;
+}
+
+.rText {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.rText > span {
+    color: #ffffff;
+    font-size: 1.5vh;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 500;
+    text-shadow: 0 0 3px black;
+}
+
+.rSteamId {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.rSteamId > span {
+    color: rgb(199, 199, 199);
+    font-size: 1.5vh;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 500;
+}
+
+.rId {
+    width: 2vh;
+    height: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5vh;
+    background-color: #006a98;
+}
+
+.rId > i {
+    color: #fff;
+    font-size: 1vh;
+}
+
+.icon.siren {
+    background-color: #006a98;
+}
+
+.icon.siren > i {
+    color: #fff;
+    font-size: 1.25vh;
+}
+
+.emotelist {
+    z-index: 4;
+    position: absolute;
+    top: 36vh;
+    left: 26vh;
+    width: calc(25vh - 2vh);
+    height: 15vh;
+    padding: 1vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: .5vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: .2s;
+    -webkit-transition: .2s ease-in;
+    overflow-y: auto;
+    gap: .5vh;
+}
+
+.emotelist::-webkit-scrollbar {
+    margin: 0;
+    display: none;
+}
+
+.emotelist > a {
+    font-size: 2vh;
+    text-decoration: none;
+}
+
+.ooc {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: .75vh;
+    margin-block-end: .75vh;
+    direction:ltr;
+}
+
+.icon.oocs {
+   background-color: #1a6fc3;
+}
+
+.icon.oocs > i {
+    color:  #01105c;
+    font-size: 1.5vh;
+}
+
+.ooctext {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.ooctext > span {
+    color: #e6e6e6;
+    font-size: 1.5vh;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 500;
+    text-shadow: 0 0 3px black;
+}
+
+.jobs {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: .75vh;
+    margin-block-end: .75vh;
+    direction:ltr;
+}
+
+.icon.jobss {
+   background-color: #1a6fc3;
+}
+
+.icon.jobss > i {
+    color:  #fbfbfb;
+    font-size: 1.25vh;
+}
+
+.jobstext {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.jobstext > span {
+    color: #e6e6e6;
+    font-size: 1.5vh;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 500;
+    text-shadow: 0 0 3px black;
+}

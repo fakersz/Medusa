@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NOVA LOJINHA</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+        <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+        
+    </head>
+<body>
+    <div id="container">
+        <div id="topo">
+            <div id="nomeServidor">
+                <img src="https://cdn.discordapp.com/attachments/712813091674390560/793690682057162762/ammunation.png" alt=""> <b>Ammunation</b> 
+            </div>
+            <!-- <input type="text" placeholder="Pesquisar Produto" id="pesquisa"> -->
+            <div id="pesquisa">
+                <div id="circle">0</div>
+            </div>
+        </div>
+        <div id="menu">
+            <div id="brancaMenu" class="menuBotao selecionado"><img src="https://media.discordapp.net/attachments/780886760078835712/797195673049104384/knife-png.png?width=522&height=480" alt=""> <b>Armas Brancas</b></div>
+            <div id="utilitarioMenu" class="menuBotao"><img src="https://cdn.discordapp.com/attachments/712813091674390560/793512482173354010/celular.png" alt=""> <b>Utilitários</b></div>
+        </div>
+        <div class="lista">
+            <div class="listaProdutos" id="branca"></div>
+            <div style="display: none;" class="listaProdutos" id="utilitario"></div>
+         </div>
+
+
+
+        <div id="fundoCompra">
+        </div>
+        <div id="modalCompra" class="animate__animated animate__fadeInRight">
+            <div id="fechar"></div>
+            <div id="carrinhoDeCompras">
+                <img src="https://cdn.discordapp.com/attachments/712813091674390560/793533030655721482/shopping-cart.png" alt=""> <b> Carrinho de compras</b>
+            </div>
+            <div id="listaCart">
+            </div>
+            <div id="totalDiv">
+                <b>Valor total</b>
+                <br><div id="total">$10.500</div>
+            </div>
+            <div id="comprar">Comprar</div>
+        </div>
+
+        
+    </div>
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+

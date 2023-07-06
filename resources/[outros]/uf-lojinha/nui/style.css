@@ -1,0 +1,359 @@
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-touch-callout: none;  /* iPhone OS, Safari */
+    -webkit-user-select: none;    /* Chrome, Safari 3 */
+    -khtml-user-select: none;     /* Safari 2 */
+    -moz-user-select: none;       /* Firefox */
+    -ms-user-select: none;        /* IE10+ */
+    user-select: none;            /* Possível implementação no futuro */
+    /* cursor: default; */
+}
+
+body{
+    
+    /* background: url(https://cdn.discordapp.com/attachments/708215158606135306/762737575945175040/bakcg.png);   */
+    background-size: 100%;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+#container{
+    display: none;
+    width: 800px;
+    height: 500px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    background: #e6e6e6;
+    border-radius: 30px;
+    overflow: hidden;
+}
+#topo{
+    width: 100%;
+    height: 100px;
+}
+
+#nomeServidor{
+    width: 400px;
+    height: 40px;
+    background: #fff;
+    border-radius: 10px;
+    margin: 20px;
+    text-align: center;
+    float: left;
+}
+
+#nomeServidor img{
+    margin: 5px;
+    width: 80px;
+    float: left;
+    position: relative;
+    left: 20px;
+    top: -3px;
+}
+#nomeServidor b{
+    line-height: 40px;
+    font-size: 20px;
+}
+
+#nomeServidor z{
+    font-size: 20px;
+}
+
+
+#pesquisa{
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border: 0;
+    border-radius: 10px;
+    text-align: center;
+    float: right;
+    margin-right: 35px;
+    margin-bottom: 0;
+    border: 2px solid #f9c445;
+    margin-top: 20px;
+    background-image: url(https://cdn.discordapp.com/attachments/712813091674390560/793533030655721482/shopping-cart.png);
+
+    background-size: 65%;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+#pesquisa:focus{
+    outline: none;
+}
+
+
+#circle{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-size: 12px;
+    background: #f9c445;
+    position: relative;
+    color: #000;
+    right: 2px;
+    top: 22px;
+    line-height: 20px;
+    font-weight: 600;
+}
+
+#menu{
+    width: 190px;
+    height: 400px;
+    float: left;
+    margin-left: 20px;
+    
+}
+.menuBotao img{
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin-top: 5px;
+    margin-left: 10px;
+
+}
+.menuBotao{
+    width: 100%;
+    height: 30px;
+    margin-top: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+
+}
+
+.menuBotao b{
+    font-weight: 500 !important;
+    margin-left: 5px;
+    line-height: 30px;
+}
+
+.menuBotao:hover{
+    background: #f9c445;
+    box-shadow: 0px 0px 1px #8f8f8f4d;
+}
+
+.lista{
+    float: left;
+    width: 590px;
+    height: 400px;
+    overflow: auto;
+    transition: all .3s ease-in-out;
+
+}
+
+.produtos{
+    width: 100px;
+    height: 150px;
+    background: #fff;
+    border-radius: 10px;
+    margin: 20px;
+    margin-top: 0;
+    float: left;
+    transition: all .3s ease-in-out;
+
+    cursor: pointer;
+    background-size: 60px;
+    background-position-x: center;
+    background-position-y: 20px;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#atoa{
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.nomeProduto{
+    font-weight: 700;
+    font-size: 13px;
+    width: 100px;
+    margin: auto;
+
+}
+
+.valorProduto{
+    color: #f9c445;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.produtos:hover{
+    box-shadow: 0px 0px 1px #8f8f8f4d;
+    background: #ffffff80;
+
+    background-size: 60px;
+    background-position-x: center;
+    background-position-y: 20px;
+    background-repeat: no-repeat;
+}
+
+
+#fundoCompra{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    border-radius: 30px;
+    position: absolute;
+    background: #0000004f;
+    z-index: 0;
+    display: none;
+}
+#modalCompra{
+    width: 300px;
+    height: 100%;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    display: none;
+    border-radius: 30px;
+}
+
+#fechar{
+    position: absolute;
+    bottom: 120px;
+    left: -10px;
+    width: 5px;
+    height: 250px;
+    border-radius: 10px;
+    background: rgb(255, 255, 255);
+} 
+
+
+#carrinhoDeCompras{
+    font-size: 13px;
+    width: 180px;
+    margin: auto;
+    margin-top: 35px;
+    line-height: 20px;
+    text-align: center;
+}
+
+#carrinhoDeCompras img{
+    width: 20px;
+    float: left;
+}
+
+
+#listaCart{
+    width: 80%;
+    height: 260px;
+    float: left;
+    margin-left: 10%;
+    margin-top: 40px;   
+    overflow: auto;
+}
+
+
+.produtoCart{
+    width: 95%;
+    height: 35px;
+    margin: 2.5%;
+    margin-top: 20px;
+    line-height: 35px;
+}
+
+.produtoCart img{
+    width: 35px;
+    float: left;
+}
+.nomeCart{
+    font-weight: 700;
+    float: left;
+    font-size: 13.5px;
+    margin-left: 10px;
+    width: 110px;
+    white-space: nowrap;
+    text-overflow: ellipsis ;
+    
+    overflow: hidden
+}
+.addCart{
+    float: right;
+}
+
+.addCart div{
+    float: left;
+    width: 20px;
+    height: 20px;
+    text-align: center; 
+    line-height: 20px;
+    margin-top: 8px;
+
+    border-radius: 5px;
+
+}
+.maisCart, .menosCart{
+    font-weight: 600;
+    background: #cecece;
+    cursor: pointer;
+    
+}
+
+.quantCart{
+    font-size: 13px;
+    width: 25px !important;
+}
+
+.maisCart:hover, .menosCart:hover{
+    background: #f9c445;
+}
+
+
+
+
+
+.selecionado{
+    background: #f9c445;
+    transform: scale(1.1);
+}
+
+
+
+
+#totalDiv{
+    text-align: center;
+}
+
+#total{
+    font-size: 30px;
+    color: #f9c445;
+    font-weight: 700;
+}
+
+#comprar{
+    width: 130px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 15px;
+    text-align: center;
+    background: #f9c445;
+    font-weight: 700;
+    transition: all .3s ease-in-out;
+}
+
+#comprar:hover{
+    transform: scale(1.05);
+}
